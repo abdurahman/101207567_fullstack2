@@ -45,8 +45,8 @@ describe('mul', () => {
         it(`mul(${i}, ${j}) expected result ${expectedPass} PASS`, () => {
             assert.equal(calculator.mul(5, 2), expectedPass);
         })
-        it(`mul(${i}, ${j}) expected result ${expectedPass} PASS`, () => {
-            assert.equal(calculator.add(5, 2), expectedPass);
+        it(`mul(${i}, ${j}) expected result ${expectedFail} FAIL`, () => {
+            assert.equal(calculator.mul(5, 2), expectedFail);
         });
     }
 
@@ -60,15 +60,15 @@ describe('div', () => {
         let expectedPass = i / j;
         let expectedFail = i / j - 3;
 
-        it(`add(${i}, ${j}) expected result ${expectedPass} PASS`, () => {
-            assert.equal(calculator.add(5, 2), expectedPass);
+        it(`div(${i}, ${j}) expected result ${expectedPass} PASS`, () => {
+            assert.equal(calculator.div(10, 2), expectedPass);
         })
-        it(`add(${i}, ${j}) expected result ${expectedFail} FAIL`, () => {
-            assert.equal(calculator.add(5, 2), expectedFail);
+        it(`div(${i}, ${j}) expected result ${expectedFail} FAIL`, () => {
+            assert.equal(calculator.div(10, 2), expectedFail);
         })
     }
 
-    let i = 5;
+    let i = 10;
     let j = 2;
     makeTest(i, j);
 })
